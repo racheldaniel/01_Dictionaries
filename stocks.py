@@ -7,8 +7,10 @@ purchases = [('AAPL', 25, '04-oct-2006', 50), ('GOOG', 15, '01-dec-2016', 100), 
 # Create a purchase history report that computes the full purchase price (shares times dollars) for each block of stock and uses the stockDict to look up the full company name.
 
 for purchase in purchases:
+    abbr = stock_dict[purchase[0]]
+    price = purchase[3] * purchase[1]
     print('I purchased {0} stock for ${1}'.format(
-        stock_dict[purchase[0]], purchase[3]))
+        abbr, price))
 
 # Create a second purchase summary that which accumulates total investment by ticker symbol. In the above sample data, there are two blocks of GE.
 
