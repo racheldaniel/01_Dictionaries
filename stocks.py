@@ -22,9 +22,9 @@ for purchase in purchases:
 
 print(new_dict)
 
-for company in new_dict.values():
+for key, company in new_dict.items():
   price = 0
-  print('----{0}----'.format(company))
+  print('----{0}----'.format(key))
   for block in company:
     price += block[3]
     print(block)
