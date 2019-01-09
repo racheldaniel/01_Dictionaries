@@ -26,7 +26,7 @@ for key, company in new_dict.items():
   price = 0
   print('----{0}----'.format(key))
   for block in company:
-    price += block[3]
+    price += (block[3] * block[1])
     print(block)
   print('Total value of stock in portfolio: {0}'.format(price))
 
