@@ -22,6 +22,12 @@ for purchase in purchases:
   else:
     new_dict[key] = [purchase]
 
+#another way to do this:
+# try:
+#   new_dict[key].append(purchase)
+# except KeyError:
+#   new_dict[key] = [purchase]
+
 print(new_dict)
 
 for key, company in new_dict.items():
@@ -29,6 +35,6 @@ for key, company in new_dict.items():
   print('----{0}----'.format(key))
   for block in company:
     price += (block[3] * block[1])
-    print(block)
-  print('Total value of stock in portfolio: {0}'.format(price))
+    print(f'      {block}')
+  print('Total value of stock in portfolio: {0}\n\n'.format(price))
 
